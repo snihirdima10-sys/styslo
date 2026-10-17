@@ -12,13 +12,44 @@
         <div class="container header__container">
             <a class= "logo" href="/"><img src="/img/favicon.svg" alt="Styslo">Styslo</a>
             <nav>
-                <a class="btn" href="/">Кабінет</a>
+                <!-- <a class="btn" href="/">Кабінет</a> -->
             </nav>
         </div>
     </header>
 
-    <main>
+    <main class="main">
+        <div class="container main__container">
+            <h1>
+                Менше символів.<br><span>Більше можливостей</span>
+            </h1>
+            <p>
+                Скорочуй посилання та стеж за переходами
+            </p>
+            <form>
+                <img src="img/favicon.svg" alt="" width="24" height="24">
+                <input
+                    type="url"
+                    name="url"
+                    placeholder="Встав довге посилання…"
+                    aria-label="Посилання для скорочення"
+                    required
+                >
+                <button type="submit">Скоротити</button>
+            </form>
+            
+            <div class="result-card">
+                <div class="content">
+                    <p class="status">• Посилання готове</p>
+                    <p class="result-link">https://exemple.com</p>
+                    <p class="old-link">https://exemple.com/catalog/summer-collection</p>
+                </div>
+                <button class="btn-copy">
+                    <img src="img/copy.svg" alt="">
+                    Копіювати
+                </button>
+            </div>
 
+        </div>
     </main>
     
 </body>
