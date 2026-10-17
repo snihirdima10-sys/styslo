@@ -40,10 +40,10 @@
             <div class="result-card">
                 <div class="content">
                     <p class="status">• Посилання готове</p>
-                    <p class="result-link">https://exemple.com</p>
+                    <p class="result-link" id="short-link">https://exemple.com</p>
                     <p class="old-link">https://exemple.com/catalog/summer-collection</p>
                 </div>
-                <button class="btn-copy">
+                <button class="btn-copy" id="copy-button">
                     <img src="img/copy.svg" alt="">
                     Копіювати
                 </button>
@@ -53,4 +53,15 @@
     </main>
     
 </body>
+<script>
+  const copyButton = document.querySelector("#copy-button");
+const shortLink = document.querySelector("#short-link");
+
+copyButton.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(shortLink.textContent.trim());
+  } catch (error) {
+  }
+});
+</script>
 </html>
